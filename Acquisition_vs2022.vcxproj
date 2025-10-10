@@ -138,7 +138,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;nidaqmx.lib;opencv_core4120d.lib;opencv_highgui4120d.lib;Spinnaker_v140.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;nidaqmx.lib;opencv_core4120d.lib;opencv_highgui4120d.lib;opencv_imgproc4120d.lib;Spinnaker_v140.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\Program Files\Teledyne\Spinnaker\lib64\vs2015;C:\SDK\Opencv\build\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
@@ -191,7 +191,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Acquisition.h" />
     <ClInclude Include="atomicops.h" />
     <ClInclude Include="Livestream.h" />
     <ClInclude Include="resource.h" />
@@ -199,12 +198,8 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Acquisition.cpp" />
-    <ClCompile Include="Livestream.cpp" />
+    <ClCompile Include="ImageEvents.cpp" />
     <ClCompile Include="stdafx.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Acquisition.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
